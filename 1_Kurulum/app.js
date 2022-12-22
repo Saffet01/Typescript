@@ -9,3 +9,5 @@ console.log(isUpdated);
 var employeName = "Saffet";
 var employeDesc = "".concat(employeName, " works well.");
 console.log(employeDesc);
+var isPresent = true;
+console.log(isPresent);

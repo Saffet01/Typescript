@@ -15,3 +15,6 @@ console.log(isUpdated);
 const employeName:string ="Saffet";
 let employeDesc:string = `${employeName} works well.`;
 console.log(employeDesc);
+
+let isPresent:boolean=true;
+console.log(isPresent);
