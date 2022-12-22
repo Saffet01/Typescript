@@ -18,3 +18,11 @@ console.log(employeDesc);
 
 let isPresent:boolean=true;
 console.log(isPresent);
+
+//string array tanımlamak için kullanılan 1. yöntem;
+let names:string[] =["Saffet", "Ramazan", "Kaban"];
+console.log(names);
+
+//string array tanımlamak için kullanılan 2. yöntem;
+let soyIsimler:Array<string> = ["Kaban", "Yıldırım", "Demirhan"];
+console.log(soyIsimler);
