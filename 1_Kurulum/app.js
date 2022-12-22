@@ -1,0 +1,11 @@
+console.log("Typescripte girdik");
+console.log("Selam");
+var age = 29;
+var firstName = "Saffet";
+console.log(age);
+console.log(firstName);
+var isUpdated = true;
+console.log(isUpdated);
+var employeName = "Saffet";
+var employeDesc = "".concat(employeName, " works well.");
+console.log(employeDesc);
