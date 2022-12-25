@@ -157,3 +157,20 @@ function carpim(a:number, b:number, c?:number){
 
 let sonuc = carpim(2,3,6);
 console.log(sonuc);
+
+
+//Class Mantığı
+class person{
+    id;
+    firstName;
+    LastName;
+    
+    constructor(id:number, firstName:string, lastName:string){
+        this.id=id;
+        this.firstName=firstName;
+        this.LastName=lastName;
+    }
+}
+
+let personDetail = new person(43, "Can", "Boz");
+console.log(personDetail);

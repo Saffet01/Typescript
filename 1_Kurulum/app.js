@@ -111,3 +111,14 @@ function carpim(a, b, c) {
 }
 var sonuc = carpim(2, 3, 6);
 console.log(sonuc);
+//Class Mantığı
+var person = /** @class */ (function () {
+    function person(id, firstName, lastName) {
+        this.id = id;
+        this.firstName = firstName;
+        this.LastName = lastName;
+    }
+    return person;
+}());
+var personDetail = new person(43, "Can", "Boz");
+console.log(personDetail);
