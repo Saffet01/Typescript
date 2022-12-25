@@ -47,7 +47,7 @@ ogretmen={
 }
 
 console.log(ogretmen);
-console.log(ogretmen.yas);
+//console.log(ogretmen.yas);
 
 
 //enum 
@@ -130,3 +130,30 @@ while(counter<5){
     console.log(counter);
     counter++;
 }
+
+
+//Function
+//parametreler hariç geri dönecek değerin de type'ını tanımlamak mümkün.
+function add(a:number,b:number):number{
+    return a+b;
+}
+
+let toplam = add(5,6);
+console.log(toplam);
+
+
+function bastir():void{
+    console.log("Saffet");
+}
+
+function carpim(a:number, b:number, c?:number){
+    if(typeof(c) !== "undefined"){
+        return a*b*c;
+    }
+    else{
+        return a*b;
+    }
+}
+
+let sonuc = carpim(2,3,6);
+console.log(sonuc);

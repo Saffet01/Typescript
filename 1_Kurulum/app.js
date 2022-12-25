@@ -31,7 +31,7 @@ ogretmen = {
     meslek: "Ogretmen"
 };
 console.log(ogretmen);
-console.log(ogretmen.yas);
+//console.log(ogretmen.yas);
 //enum 
 var media;
 (function (media) {
@@ -91,3 +91,23 @@ while (counter < 5) {
     console.log(counter);
     counter++;
 }
+//Function
+//parametreler hariç geri dönecek değerin de type'ını tanımlamak mümkün.
+function add(a, b) {
+    return a + b;
+}
+var toplam = add(5, 6);
+console.log(toplam);
+function bastir() {
+    console.log("Saffet");
+}
+function carpim(a, b, c) {
+    if (typeof (c) !== "undefined") {
+        return a * b * c;
+    }
+    else {
+        return a * b;
+    }
+}
+var sonuc = carpim(2, 3, 6);
+console.log(sonuc);
