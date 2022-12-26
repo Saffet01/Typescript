@@ -172,5 +172,6 @@ class person{
     }
 }
 
+
 let personDetail = new person(43, "Can", "Boz");
 console.log(personDetail);
