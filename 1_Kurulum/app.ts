@@ -179,8 +179,8 @@ console.log(personDetail);
 
 //Access Modifiers (Public, Private, Protected)
 class person2{
-    id;
-    firstName;
+    public id;
+    private firstName;
     LastName;
     
     constructor(id:number, firstName:string, lastName:string){
@@ -197,3 +197,22 @@ class person2{
 
 let kisiBilgim = new person2(43,"Saffet","Kaban");
 console.log(kisiBilgim.id);
+
+//Private değer Class dışarısında kullanılamaz.
+//console.log(kisiBilgim.firstName);
+
+
+//parent class person2, child class employee
+//Inheritance
+class employee extends person2{
+
+    constructor(id:number, firstName:string, lastName:string){
+        super(id,firstName,lastName);
+    }
+
+}
+
+let Employee = new employee(29,"Saffet","Ramazan");
+
+console.log(Employee);
+
