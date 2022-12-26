@@ -175,3 +175,25 @@ class person{
 
 let personDetail = new person(43, "Can", "Boz");
 console.log(personDetail);
+
+
+//Access Modifiers (Public, Private, Protected)
+class person2{
+    id;
+    firstName;
+    LastName;
+    
+    constructor(id:number, firstName:string, lastName:string){
+        this.id=id;
+        this.firstName=firstName;
+        this.LastName=lastName;
+    }
+
+    getFullName(){
+        return `${this.firstName} ${this.LastName}`;
+    }
+
+}
+
+let kisiBilgim = new person2(43,"Saffet","Kaban");
+console.log(kisiBilgim.id);

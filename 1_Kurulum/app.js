@@ -122,3 +122,17 @@ var person = /** @class */ (function () {
 }());
 var personDetail = new person(43, "Can", "Boz");
 console.log(personDetail);
+//Access Modifiers (Public, Private, Protected)
+var person2 = /** @class */ (function () {
+    function person2(id, firstName, lastName) {
+        this.id = id;
+        this.firstName = firstName;
+        this.LastName = lastName;
+    }
+    person2.prototype.getFullName = function () {
+        return "".concat(this.firstName, " ").concat(this.LastName);
+    };
+    return person2;
+}());
+var kisiBilgim = new person2(43, "Saffet", "Kaban");
+console.log(kisiBilgim.id);
