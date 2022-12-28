@@ -164,3 +164,43 @@ var employee = /** @class */ (function (_super) {
 }(person2));
 var Employee = new employee(29, "Saffet", "Ramazan");
 console.log(Employee);
+//Static 
+var circle = /** @class */ (function () {
+    function circle() {
+    }
+    circle.calculate = function (radius) {
+        return this.pi * radius * radius;
+    };
+    circle.pi = 3.14;
+    return circle;
+}());
+console.log(circle.pi);
+console.log(circle.calculate(3));
+//abstract class
+var Department = /** @class */ (function () {
+    function Department(name) {
+        this.name = name;
+    } // 3- yollanan "Accounting and Auditing"i name ile tutuyoruz
+    Department.prototype.printName = function () {
+        console.log("Department name: ".concat(this.name));
+    };
+    return Department;
+}());
+var AccountingDepartment = /** @class */ (function (_super) {
+    __extends(AccountingDepartment, _super);
+    function AccountingDepartment() {
+        return _super.call(this, "Accounting and Auditing") || this;
+        // 2 - "Accounting and Auditing"i departmente geçeceğim.
+    }
+    AccountingDepartment.prototype.printMeeting = function () {
+        console.log("The Accounting Department meets each Monday at 10 am.");
+    };
+    AccountingDepartment.prototype.generateReport = function () {
+        console.log("Generating accounting reports...");
+    };
+    return AccountingDepartment;
+}(Department));
+var department = new AccountingDepartment();
+department.printName();
+department.printMeeting();
+department.generateReport();

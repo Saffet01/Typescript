@@ -216,3 +216,50 @@ let Employee = new employee(29,"Saffet","Ramazan");
 
 console.log(Employee);
 
+
+
+//Static 
+class circle{
+    static pi:number = 3.14;
+
+    static calculate(radius){
+        return this.pi*radius*radius;
+    }
+}
+
+
+console.log(circle.pi);
+console.log(circle.calculate(3)) ;
+
+
+//abstract class
+abstract class Department{
+    constructor(public name:string){} // 3- yollanan "Accounting and Auditing"i name ile tutuyoruz
+
+    printName():void{
+        console.log(`Department name: ${this.name}`);
+    }
+
+    abstract printMeeting(): void; // abstract metod tanımladığında bunu child classta da kullanman gerek yoksa hata veriyor
+    //Abstract class içerisinde ille abstract metod tanımlamaya gerek yok tabii
+}
+
+class AccountingDepartment extends Department{
+    constructor(){
+        super("Accounting and Auditing"); // 1- Super keywordu ile parent class olan departmente geçebliyoruz.
+                                          // 2 - "Accounting and Auditing"i departmente geçeceğim.
+    }
+
+    printMeeting():void{
+        console.log("The Accounting Department meets each Monday at 10 am.")
+    }
+
+    generateReport():void{
+        console.log("Generating accounting reports...");
+    }
+}
+
+let department =new AccountingDepartment();
+department.printName();
+department.printMeeting();
+department.generateReport();
