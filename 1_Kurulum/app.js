@@ -219,3 +219,16 @@ var kisi = {
     ortaIsim: "Ramazan"
 };
 console.log(tumIsimAl(kisi));
+var iemployee = {
+    empNum: 1,
+    gender: "Male",
+    namee: "Saffet"
+};
+console.log(iemployee);
+var yeniKisi = {
+    AccountName: "Saffet",
+    AccountId: 54,
+    AccountEmail: "srk@gmail.com",
+    AccountPhone: "431 2313"
+};
+console.log(yeniKisi);

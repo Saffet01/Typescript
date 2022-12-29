@@ -291,3 +291,50 @@ let kisi = {
 
 console.log(tumIsimAl(kisi));
 
+// interface extend etme
+
+interface IPerson {
+    namee: string;
+    gender: string
+}
+
+interface IEmployee extends IPerson {
+    empNum: number;
+}
+
+let iemployee: IEmployee = {
+    empNum: 1,
+    gender: "Male",
+    namee: "Saffet"
+}
+
+console.log(iemployee);
+
+
+//ıntersection Type
+interface BusinessPartner {
+    AccountName: string;
+    credit: number;
+}
+
+interface Identity {
+    AccountName: string;
+    AccountId: number;
+}
+
+interface Contact {
+    AccountEmail: string;
+    AccountPhone: string;
+}
+
+
+type IdCont = Identity & Contact;
+
+let yeniKisi:IdCont={
+    AccountName: "Saffet",
+    AccountId: 54,
+    AccountEmail: "srk@gmail.com",
+    AccountPhone: "431 2313"
+}
+
+console.log(yeniKisi);
