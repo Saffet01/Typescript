@@ -1,49 +1,49 @@
 console.log("Typescripte girdik");
 console.log("Selam");
 
-let age:number = 29;
-let firstName:string = "Saffet";
+let age: number = 29;
+let firstName: string = "Saffet";
 
 console.log(age);
 console.log(firstName);
 
-let isUpdated:boolean = true;
+let isUpdated: boolean = true;
 
 console.log(isUpdated);
 
 
-const employeName:string ="Saffet";
-let employeDesc:string = `${employeName} works well.`;
+const employeName: string = "Saffet";
+let employeDesc: string = `${employeName} works well.`;
 console.log(employeDesc);
 
-let isPresent:boolean=true;
+let isPresent: boolean = true;
 console.log(isPresent);
 
 //string array tanımlamak için kullanılan 1. yöntem;
-let names:string[] =["Saffet", "Ramazan", "Kaban"];
+let names: string[] = ["Saffet", "Ramazan", "Kaban"];
 console.log(names);
 
 //string array tanımlamak için kullanılan 2. yöntem;
-let soyIsimler:Array<string> = ["Kaban", "Yıldırım", "Demirhan"];
+let soyIsimler: Array<string> = ["Kaban", "Yıldırım", "Demirhan"];
 console.log(soyIsimler);
 
 
 //Tuples
-let instructorName:string = "Can Boz";
+let instructorName: string = "Can Boz";
 console.log(instructorName);
 
-let instructor:[number, string, boolean] = [1, "Can Boz", false];
+let instructor: [number, string, boolean] = [1, "Can Boz", false];
 console.log(instructor);
 
 
 //Object
-let ogretmen:object;
+let ogretmen: object;
 
-ogretmen={
-    isim:"Can",
-    soiyim:"Boz",
-    yas:29,
-    meslek:"Ogretmen"
+ogretmen = {
+    isim: "Can",
+    soiyim: "Boz",
+    yas: 29,
+    meslek: "Ogretmen"
 }
 
 console.log(ogretmen);
@@ -62,19 +62,19 @@ console.log(media.newsletter);
 
 
 //Union
-let code:string | number = "123";
+let code: string | number = "123";
 console.log(code);
 
 //Any
-let someThing:any = "Selam";
+let someThing: any = "Selam";
 console.log(someThing);
 
-someThing=321;
+someThing = 321;
 console.log(someThing);
 
 
 //void
-function sayHello(): void{
+function sayHello(): void {
     console.log("Hi!")
 }
 
@@ -82,29 +82,29 @@ sayHello();
 
 
 //If else 
-let x:number = 15;
-let y:number = 25;
+let x: number = 15;
+let y: number = 25;
 
-if(x>y){
+if (x > y) {
     console.log("x y'den büyüktür.");
 }
-else{
+else {
     console.log("x y'den küçüktür veya eşittir.");
 }
 
 // Ternary örneği
-x<y ? console.log("x y'den küçüktür.") : console.log("x y'den büyüktür.");
+x < y ? console.log("x y'den küçüktür.") : console.log("x y'den büyüktür.");
 
 
 //Switch Case
-let day:number = 2;
+let day: number = 2;
 
-switch(day){
+switch (day) {
     case 0:
         console.log("Pazar");
         break;
 
-    case 1: 
+    case 1:
         console.log("pazartesi");
         break;
 
@@ -119,14 +119,14 @@ switch(day){
 
 
 //For loop
-for(let i = 0; i<5; i++){
-    console.log("i değerim",i);
+for (let i = 0; i < 5; i++) {
+    console.log("i değerim", i);
 }
 
 
 //While Loop
-let counter =0;
-while(counter<5){
+let counter = 0;
+while (counter < 5) {
     console.log(counter);
     counter++;
 }
@@ -134,41 +134,41 @@ while(counter<5){
 
 //Function
 //parametreler hariç geri dönecek değerin de type'ını tanımlamak mümkün.
-function add(a:number,b:number):number{
-    return a+b;
+function add(a: number, b: number): number {
+    return a + b;
 }
 
-let toplam = add(5,6);
+let toplam = add(5, 6);
 console.log(toplam);
 
 
-function bastir():void{
+function bastir(): void {
     console.log("Saffet");
 }
 
-function carpim(a:number, b:number, c?:number){
-    if(typeof(c) !== "undefined"){
-        return a*b*c;
+function carpim(a: number, b: number, c?: number) {
+    if (typeof (c) !== "undefined") {
+        return a * b * c;
     }
-    else{
-        return a*b;
+    else {
+        return a * b;
     }
 }
 
-let sonuc = carpim(2,3,6);
+let sonuc = carpim(2, 3, 6);
 console.log(sonuc);
 
 
 //Class Mantığı
-class person{
+class person {
     id;
     firstName;
     LastName;
-    
-    constructor(id:number, firstName:string, lastName:string){
-        this.id=id;
-        this.firstName=firstName;
-        this.LastName=lastName;
+
+    constructor(id: number, firstName: string, lastName: string) {
+        this.id = id;
+        this.firstName = firstName;
+        this.LastName = lastName;
     }
 }
 
@@ -178,24 +178,24 @@ console.log(personDetail);
 
 
 //Access Modifiers (Public, Private, Protected)
-class person2{
+class person2 {
     public id;
     private firstName;
     LastName;
-    
-    constructor(id:number, firstName:string, lastName:string){
-        this.id=id;
-        this.firstName=firstName;
-        this.LastName=lastName;
+
+    constructor(id: number, firstName: string, lastName: string) {
+        this.id = id;
+        this.firstName = firstName;
+        this.LastName = lastName;
     }
 
-    getFullName(){
+    getFullName() {
         return `${this.firstName} ${this.LastName}`;
     }
 
 }
 
-let kisiBilgim = new person2(43,"Saffet","Kaban");
+let kisiBilgim = new person2(43, "Saffet", "Kaban");
 console.log(kisiBilgim.id);
 
 //Private değer Class dışarısında kullanılamaz.
@@ -204,39 +204,39 @@ console.log(kisiBilgim.id);
 
 //parent class person2, child class employee
 //Inheritance
-class employee extends person2{
+class employee extends person2 {
 
-    constructor(id:number, firstName:string, lastName:string){
-        super(id,firstName,lastName);
+    constructor(id: number, firstName: string, lastName: string) {
+        super(id, firstName, lastName);
     }
 
 }
 
-let Employee = new employee(29,"Saffet","Ramazan");
+let Employee = new employee(29, "Saffet", "Ramazan");
 
 console.log(Employee);
 
 
 
 //Static 
-class circle{
-    static pi:number = 3.14;
+class circle {
+    static pi: number = 3.14;
 
-    static calculate(radius){
-        return this.pi*radius*radius;
+    static calculate(radius) {
+        return this.pi * radius * radius;
     }
 }
 
 
 console.log(circle.pi);
-console.log(circle.calculate(3)) ;
+console.log(circle.calculate(3));
 
 
 //abstract class
-abstract class Department{
-    constructor(public name:string){} // 3- yollanan "Accounting and Auditing"i name ile tutuyoruz
+abstract class Department {
+    constructor(public name: string) { } // 3- yollanan "Accounting and Auditing"i name ile tutuyoruz
 
-    printName():void{
+    printName(): void {
         console.log(`Department name: ${this.name}`);
     }
 
@@ -244,22 +244,50 @@ abstract class Department{
     //Abstract class içerisinde ille abstract metod tanımlamaya gerek yok tabii
 }
 
-class AccountingDepartment extends Department{
-    constructor(){
+class AccountingDepartment extends Department {
+    constructor() {
         super("Accounting and Auditing"); // 1- Super keywordu ile parent class olan departmente geçebliyoruz.
-                                          // 2 - "Accounting and Auditing"i departmente geçeceğim.
+        // 2 - "Accounting and Auditing"i departmente geçeceğim.
     }
 
-    printMeeting():void{
+    printMeeting(): void {
         console.log("The Accounting Department meets each Monday at 10 am.")
     }
 
-    generateReport():void{
+    generateReport(): void {
         console.log("Generating accounting reports...");
     }
 }
 
-let department =new AccountingDepartment();
+let department = new AccountingDepartment();
 department.printName();
 department.printMeeting();
 department.generateReport();
+
+
+//ınterface
+interface Person {
+    ilkIsim: string,
+    sonIsim: string,
+    ortaIsim?: string //orta isim varsa eğer string olarak al dedik burada
+}
+
+function tumIsimAl(kisi: Person) {
+    if (kisi.ortaIsim) {
+        //orta isim varsa kisi içerisinde return değişir
+        return `${kisi.ilkIsim} ${kisi.ortaIsim} ${kisi.sonIsim}`;
+    }
+    else {
+
+        return `${kisi.ilkIsim} ${kisi.sonIsim}`;
+    }
+}
+
+let kisi = {
+    ilkIsim: "Saffet",
+    sonIsim: "Kaban",
+    ortaIsim: "Ramazan"
+}
+
+console.log(tumIsimAl(kisi));
+

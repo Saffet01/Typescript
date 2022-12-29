@@ -204,3 +204,18 @@ var department = new AccountingDepartment();
 department.printName();
 department.printMeeting();
 department.generateReport();
+function tumIsimAl(kisi) {
+    if (kisi.ortaIsim) {
+        //orta isim varsa kisi içerisinde return değişir
+        return "".concat(kisi.ilkIsim, " ").concat(kisi.ortaIsim, " ").concat(kisi.sonIsim);
+    }
+    else {
+        return "".concat(kisi.ilkIsim, " ").concat(kisi.sonIsim);
+    }
+}
+var kisi = {
+    ilkIsim: "Saffet",
+    sonIsim: "Kaban",
+    ortaIsim: "Ramazan"
+};
+console.log(tumIsimAl(kisi));
