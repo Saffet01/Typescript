@@ -250,3 +250,8 @@ function getRandomElements(items) {
     return items[randomIndex];
 }
 console.log(getRandomElements(numbers));
+var mounth = {
+    key: 1,
+    value: "January"
+};
+console.log(mounth);

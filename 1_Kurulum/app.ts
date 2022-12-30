@@ -364,3 +364,17 @@ function getRandomElements<T>(items : T[]) : T {
 }
 
 console.log(getRandomElements(numbers));
+
+
+// Interface Generics
+interface Mounths<U,V>{
+    key: U,
+    value: V
+}
+
+let mounth:Mounths<number,string> = {
+    key:1,
+    value:"January"
+}
+
+console.log(mounth);
