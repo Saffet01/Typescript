@@ -232,3 +232,21 @@ var yeniKisi = {
     AccountPhone: "431 2313"
 };
 console.log(yeniKisi);
+//Generics
+function getRandomNumber(numItems) {
+    var randomNumIndex = Math.floor(Math.random() * numItems.length);
+    return numItems[randomNumIndex];
+}
+var numbers = [1, 54, 67, 7, 8];
+console.log(getRandomNumber(numbers));
+function getRandomString(strItems) {
+    var randomStrIndex = Math.floor(Math.random() * strItems.length);
+    return strItems[randomStrIndex];
+}
+var strArr = ["Alperen", "Yıldırım", "Saffet", "Ramazan"];
+console.log(getRandomString(strArr));
+function getRandomElements(items) {
+    var randomIndex = Math.floor(Math.random() * items.length);
+    return items[randomIndex];
+}
+console.log(getRandomElements(numbers));

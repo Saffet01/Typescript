@@ -330,7 +330,7 @@ interface Contact {
 
 type IdCont = Identity & Contact;
 
-let yeniKisi:IdCont={
+let yeniKisi: IdCont = {
     AccountName: "Saffet",
     AccountId: 54,
     AccountEmail: "srk@gmail.com",
@@ -338,3 +338,29 @@ let yeniKisi:IdCont={
 }
 
 console.log(yeniKisi);
+
+//Generics
+
+function getRandomNumber(numItems: number[]): number {
+    let randomNumIndex = Math.floor(Math.random()*numItems.length);
+    return numItems[randomNumIndex];
+}
+
+let numbers = [1,54,67,7,8];
+console.log(getRandomNumber(numbers));
+
+
+function getRandomString(strItems: string[]): string{
+    let randomStrIndex = Math.floor(Math.random()*strItems.length);
+    return strItems[randomStrIndex];
+}
+
+let strArr = ["Alperen", "Yıldırım", "Saffet", "Ramazan"];
+console.log(getRandomString(strArr));
+
+function getRandomElements<T>(items : T[]) : T {
+    let randomIndex = Math.floor(Math.random()*items.length);
+    return items[randomIndex];
+}
+
+console.log(getRandomElements(numbers));
